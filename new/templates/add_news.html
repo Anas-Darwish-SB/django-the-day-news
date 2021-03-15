@@ -1,0 +1,23 @@
+{% extends 'bace.html' %} 
+{% block body %}
+{% load bootstrap4 %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <h4>Post New News</h4>
+            <div class=" white-bg">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {% buttons %}
+                        <button class="btn btn-info w-100">Add News</button>
+                    {% endbuttons %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

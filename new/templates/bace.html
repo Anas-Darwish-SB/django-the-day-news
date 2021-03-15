@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>News</title>
+
+      <style>
+        .imglist{
+          border-radius: 6px;
+        }
+        .pagination-color{
+          border-color: #17a2b8;
+          color: #17a2b8;
+        }
+        .pagination-color:hover{
+          background-color: #17a2b8;
+          color: white;
+          
+        }
+        .pagination-color:active{
+          background-color: #17a2bf;
+        }
+      </style>
+
+
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="/"><b>The Day News</b></a>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/news/">News <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          {% block search %}
+          {% endblock search %}
+        </div>
+      </nav>
+      <br>
+
+    {% block body %}
+    {% endblock %}
+    <br>
+    
+    <footer class="bg-info text-center text-white border border-dark" style="border: 30px;">
+      <div class="container p-4 pb-0" >
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="https://www.facebook.com/anas.darwish.927"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #ac2bac;"
+            href="https://www.instagram.com/anas.darwish.927/"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <!-- Github -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #333333;"
+            href="https://github.com/Anas-Darwish-SB"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+      </div>
+      <div class="text-center p-1">        
+        <b class="text-white"><h1>Anas Darwish</h1></b>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'bace.html' %} 
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 mx-auto">
+            <div class=" white-bg">
+                <div class="card bg-info text-white p-3">
+                    <div class="card-body text-center w-100">
+                        <img class="card-img-top imglist" src="{{ news.img.url }}" alt="">
+                        <br>
+                        <br>
+                        <h1>{{news}}</h1>
+                        <div class="text-left jumbotron text-info">
+                            <p ><b>{{news.content|linebreaks}}</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
